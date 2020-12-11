@@ -1,15 +1,12 @@
-import React from 'react'
-import Square from "./Square";
+import React from "react";
+import Square from '../components/Square';
 
-function Board({ squares, onClick }) {
-    return (
-        <div className="board">
-            {squares.map((square, i) => (
-                <Square key={i} value={square} onClick={() => onClick(i)} />
-            ))}
-
-        </div>
-    )
-}
+const Board = ({ squares, onClick }) => (
+    <div className="board">
+        {squares.map((square, i) => (
+            <Square key={i} value={square} onClick={() => onClick(i)} />
+        ))}
+    </div>
+);
 
 export default Board;
